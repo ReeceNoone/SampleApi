@@ -57,14 +57,13 @@ public class UpdateLocationCommandHandler : IRequestHandler<UpdateLocationComman
         if (previousLocation is not null)
         {
             _logger.LogInformation("User {UserId} left location {@Location}", request.UserId, previousLocation);
-            _eventBus.Publish(EventIds.Locations.LocationLeft, previousLocation);
+            _eventBus.Publish(EventIds.Locations.LocationLeft, _mapper.Map<UserLocationDto>(previousLocation));
         }
-
-        _eventBus.Publish(EventIds.Locations.LocationUpdated, newLocation);
 
         _logger.LogInformation("Finished updating location for user {UserId}, {@Location}", request.UserId, newLocation);
 
         var userLocationDto = _mapper.Map<UserLocationDto>(newLocation);
+        _eventBus.Publish(EventIds.Locations.LocationUpdated, userLocationDto);
 
         return Result.Ok(userLocationDto);
     }
