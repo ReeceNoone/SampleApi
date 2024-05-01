@@ -2,6 +2,7 @@
 using FluentAssertions;
 using Locator.Contracts.Requests.Locations;
 using Locator.Contracts.Responses;
+using Locator.Persistence.Entities;
 
 namespace Locator.WebApi.Tests.Controllers.Locations;
 
@@ -12,6 +13,19 @@ public partial class LocationsControllerTests
     {
         // Arrange
         var user = await CreateUser();
+
+        var currentLocation = new LocationEntity
+        {
+            Id = Guid.NewGuid(),
+            UserId = user.Id,
+            Latitude = 1.0,
+            Longitude = 1.0,
+            Address = "Some address",
+            CreatedAt = DateTime.Now
+        };
+
+        await LocationRepository.AddAsync(currentLocation);
+
         var location = new UpdateUserLocationRequest { Latitude = 1.0, Longitude = 1.0, Address = "Some address" };
 
         // Act
@@ -31,7 +45,7 @@ public partial class LocationsControllerTests
         var userLocations = (await LocationRepository.GetWhereAsync(x => x.UserId == user.Id)).ToList();
 
         userLocations.Should().NotBeEmpty();
-        userLocations.Should().HaveCount(1);
+        userLocations.Should().HaveCount(2);
 
         var userLocation = userLocations[0];
         userLocation.UserId.Should().Be(user.Id);
@@ -40,5 +54,9 @@ public partial class LocationsControllerTests
         userLocation.Address.Should().Be(location.Address);
         userLocation.CreatedAt.Should().BeCloseTo(DateTime.UtcNow, TimeSpan.FromMinutes(1));
         userLocation.LeftAt.Should().BeNull();
+
+        var oldLocation = await LocationRepository.GetByIdAsync(currentLocation.Id);
+        oldLocation.Should().NotBeNull();
+        oldLocation!.LeftAt.Should().BeCloseTo(DateTime.UtcNow, TimeSpan.FromMinutes(1));
     }
 }
