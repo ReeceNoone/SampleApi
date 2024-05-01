@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Locator.Common.WebApi\Locator.Common.WebApi.csproj" />
+      <ProjectReference Include="..\Locator.Common\Locator.Common.csproj" />
+      <ProjectReference Include="..\Locator.Contracts\Locator.Contracts.csproj" />
+      <ProjectReference Include="..\Locator.Persistence\Locator.Persistence.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" />
+    </ItemGroup>
+
+</Project>

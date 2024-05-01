@@ -1,0 +1,14 @@
+is_global = true
+global_level = 250
+
+# Use async suffix
+dotnet_diagnostic.VSTHRD200.severity = none
+
+# Remove underscores
+dotnet_diagnostic.CA1707.severity = none
+
+# Missing XML documentation
+dotnet_diagnostic.CS1591.severity = none
+
+# Missing XML documentation
+dotnet_diagnostic.CA2000.severity = none

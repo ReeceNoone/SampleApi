@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" />
+      <PackageReference Include="MediatR.Contracts" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Locator.Common.Contracts\Locator.Common.Contracts.csproj" />
+      <ProjectReference Include="..\Locator.Common.WebApi\Locator.Common.WebApi.csproj" />
+      <ProjectReference Include="..\Locator.Contracts\Locator.Contracts.csproj" />
+      <ProjectReference Include="..\Locator.Domain\Locator.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

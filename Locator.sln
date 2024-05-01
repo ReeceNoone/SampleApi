@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{87EE082A-B728-4406-A450-284CF69DAD8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locator.Common", "src\Locator.Common\Locator.Common.csproj", "{646DF87A-2CDB-4699-9B89-0429771ACDC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{75FBD65C-CBE1-45A1-AC3B-279FB869250F}"
+	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
+		src\Directory.Packages.props = src\Directory.Packages.props
+		eng\build-props\AddCommonTestNugetPackages.props = eng\build-props\AddCommonTestNugetPackages.props
+		eng\build-props\AddAnalyzers.props = eng\build-props\AddAnalyzers.props
+		eng\build-props\MakeInternalsVisibleToTestProjects.props = eng\build-props\MakeInternalsVisibleToTestProjects.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Analyzers", "Analyzers", "{BE2BB9B2-1D77-40A1-A7E0-12735BD47F66}"
+	ProjectSection(SolutionItems) = preProject
+		eng\analyzers\base.globalconfig = eng\analyzers\base.globalconfig
+		eng\analyzers\test.globalconfig = eng\analyzers\test.globalconfig
+		eng\analyzers\api.globalconfig = eng\analyzers\api.globalconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locator.Common.Contracts", "src\Locator.Common.Contracts\Locator.Common.Contracts.csproj", "{8A7FD318-45DD-45CB-8568-60013E70BCD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locator.Common.WebApi", "src\Locator.Common.WebApi\Locator.Common.WebApi.csproj", "{0089C614-E92D-47FD-B4EF-59B3EEAB48B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locator.WebApi", "src\Locator.WebApi\Locator.WebApi.csproj", "{0C121192-B11F-4EE2-A454-EDB40F27E712}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locator.Application", "src\Locator.Application\Locator.Application.csproj", "{733CBB56-4DF5-447A-A519-4B3FE7544AB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locator.Domain", "src\Locator.Domain\Locator.Domain.csproj", "{7EF650D6-AE16-464C-9D7C-0E9D636FBEA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locator.Contracts", "src\Locator.Contracts\Locator.Contracts.csproj", "{7C7AD974-A00F-4CA2-9019-B87FD1DBE40F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locator.WebApi.Tests", "src\Locator.WebApi.Tests\Locator.WebApi.Tests.csproj", "{00ED20FF-085C-4E76-A629-486EB4F30B1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locator.Persistence", "src\Locator.Persistence\Locator.Persistence.csproj", "{5BC3D813-360F-4794-9062-2FD814CC95AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{646DF87A-2CDB-4699-9B89-0429771ACDC9} = {87EE082A-B728-4406-A450-284CF69DAD8E}
+		{BE2BB9B2-1D77-40A1-A7E0-12735BD47F66} = {75FBD65C-CBE1-45A1-AC3B-279FB869250F}
+		{8A7FD318-45DD-45CB-8568-60013E70BCD2} = {87EE082A-B728-4406-A450-284CF69DAD8E}
+		{0089C614-E92D-47FD-B4EF-59B3EEAB48B7} = {87EE082A-B728-4406-A450-284CF69DAD8E}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{646DF87A-2CDB-4699-9B89-0429771ACDC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646DF87A-2CDB-4699-9B89-0429771ACDC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646DF87A-2CDB-4699-9B89-0429771ACDC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646DF87A-2CDB-4699-9B89-0429771ACDC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A7FD318-45DD-45CB-8568-60013E70BCD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A7FD318-45DD-45CB-8568-60013E70BCD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A7FD318-45DD-45CB-8568-60013E70BCD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A7FD318-45DD-45CB-8568-60013E70BCD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0089C614-E92D-47FD-B4EF-59B3EEAB48B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0089C614-E92D-47FD-B4EF-59B3EEAB48B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0089C614-E92D-47FD-B4EF-59B3EEAB48B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0089C614-E92D-47FD-B4EF-59B3EEAB48B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C121192-B11F-4EE2-A454-EDB40F27E712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C121192-B11F-4EE2-A454-EDB40F27E712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C121192-B11F-4EE2-A454-EDB40F27E712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C121192-B11F-4EE2-A454-EDB40F27E712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{733CBB56-4DF5-447A-A519-4B3FE7544AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{733CBB56-4DF5-447A-A519-4B3FE7544AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{733CBB56-4DF5-447A-A519-4B3FE7544AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{733CBB56-4DF5-447A-A519-4B3FE7544AB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EF650D6-AE16-464C-9D7C-0E9D636FBEA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EF650D6-AE16-464C-9D7C-0E9D636FBEA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EF650D6-AE16-464C-9D7C-0E9D636FBEA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EF650D6-AE16-464C-9D7C-0E9D636FBEA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C7AD974-A00F-4CA2-9019-B87FD1DBE40F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C7AD974-A00F-4CA2-9019-B87FD1DBE40F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C7AD974-A00F-4CA2-9019-B87FD1DBE40F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C7AD974-A00F-4CA2-9019-B87FD1DBE40F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00ED20FF-085C-4E76-A629-486EB4F30B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00ED20FF-085C-4E76-A629-486EB4F30B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00ED20FF-085C-4E76-A629-486EB4F30B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00ED20FF-085C-4E76-A629-486EB4F30B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BC3D813-360F-4794-9062-2FD814CC95AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BC3D813-360F-4794-9062-2FD814CC95AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BC3D813-360F-4794-9062-2FD814CC95AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BC3D813-360F-4794-9062-2FD814CC95AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation" />
+      <PackageReference Include="FluentValidation.AspNetCore" />
+      <PackageReference Include="Joonasw.AspNetCore.SecurityHeaders" />
+      <PackageReference Include="MediatR" />
+      <PackageReference Include="Microsoft.ApplicationInsights" />
+      <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" />
+      <PackageReference Include="Newtonsoft.Json" />
+      <PackageReference Include="Swashbuckle.AspNetCore" />
+      <PackageReference Include="Swashbuckle.AspNetCore.Filters" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Locator.Common.Contracts\Locator.Common.Contracts.csproj" />
+      <ProjectReference Include="..\Locator.Common\Locator.Common.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Locator.Common.Contracts\Locator.Common.Contracts.csproj" />
+      <ProjectReference Include="..\Locator.Common\Locator.Common.csproj" />
+    </ItemGroup>
+
+</Project>

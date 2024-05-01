@@ -1,0 +1,8 @@
+is_global = true
+global_level = 250
+
+# Elements should be documented
+dotnet_diagnostic.SA1615.severity = none
+
+# Space after >
+dotnet_diagnostic.SA1015.severity = none

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Bogus" />
+      <PackageReference Include="Destructurama.Attributed" />
+      <PackageReference Include="FluentValidation" />
+      <PackageReference Include="Swashbuckle.AspNetCore.Filters.Abstractions" />
+    </ItemGroup>
+
+</Project>
