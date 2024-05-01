@@ -42,7 +42,7 @@ public class LocationsController : BaseApiController
         return result.ToActionResult();
     }
 
-    [HttpGet]
+    [HttpGet("current")]
     public async Task<IActionResult> GetAllCurrentLocationsAsync()
     {
         var result = await CommandBus.SendAsync<GetAllUserCurrentLocationCommand, Dictionary<Guid, UserLocationDto?>>(HttpContext, new GetAllUserCurrentLocationCommand());
